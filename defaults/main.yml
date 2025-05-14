@@ -1,0 +1,17 @@
+---
+# Superhero matrix-server-modules
+
+matrix_superhero_modules_enabled: false
+matrix_superhero_modules_token: ""
+matrix_superhero_modules_git_repo: "https://x-access-token:{{ matrix_superhero_modules_token }}@github.com/***/***-synapse-patch.git"
+matrix_superhero_modules_git_path: "/matrix/synapse-patch"
+matrix_superhero_modules_git_src_path: "/custom_modules"
+matrix_superhero_modules_version: "main"
+matrix_superhero_modules_room_name_checker_enabled: true
+matrix_superhero_modules_trigger_account_validation_enabled: true
+matrix_superhero_modules_trigger_account_validation_config:
+  backend_base_url: "https://{{ matrix_server_fqn_matrix }}/callback"
+matrix_superhero_modules_room_name_checker_config:
+  admin_users:
+    - "@admin:{{ matrix_domain }}"
+    - "@backendbot:{{ matrix_domain }}"
